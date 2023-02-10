@@ -3,6 +3,7 @@ import { renderSearchResultsBlock, renderSearchStubBlock } from "./search-result
 import { getFavoritesAmount, renderUserBlock } from "./user.js"
 // import { renderToast } from "./lib.js"
 
+declare const window: Window;
 if (typeof window !== undefined && window && window.addEventListener) {
   window.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
@@ -18,7 +19,7 @@ if (typeof window !== undefined && window && window.addEventListener) {
     );
     renderUserBlock("Eva Berdash", "/img/avatar.png", getFavoritesAmount());
     renderSearchFormBlock(dateIn, dateOut);
-    renderSearchStubBlock();
+   // renderSearchResultsBlock();
     // renderToast(
     //   {
     //     text: "Это пример уведомления. Используйте его при необходимости",
